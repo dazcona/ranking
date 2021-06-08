@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+
+  example:
+    
+    image: example
+    container_name: example
+    working_dir: /code
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+
+    environment:
+      - PYTHONPATH=/code
+    env_file:
+      - .env
+
+    ports:
+      - "8888:8888"
+
+    volumes:
+      - ../:/code
+      - ../data:/data
+
+    command: jupyter notebook --allow-root --ip=0.0.0.0 --port=8888 --no-browser --NotebookApp.token='' --NotebookApp.password=''
