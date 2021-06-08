@@ -8,7 +8,7 @@ Run TensorFlow Ranking examples
 $ docker-compose -f docker/docker-compose.yml up -d --build
 ```
 
-Browse []
+Browse [localhost:8888](http://localhost:8888/)
 
 ## Docker commands
 
