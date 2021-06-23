@@ -8,11 +8,11 @@ RUN apt update -y && apt install -y \
 
 # Install Python libraries
 RUN pip install \
-    tensorflow \
+    tensorflow==2.5.0 \
     jupyter \
     sagemaker \
     pillow \
     scipy \
     pandas \
     sklearn \
-    tensorflow_ranking
+    tensorflow_ranking==0.4.0
